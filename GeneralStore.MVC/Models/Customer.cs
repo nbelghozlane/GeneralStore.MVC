@@ -20,6 +20,13 @@ namespace GeneralStore.MVC.Models
         public string LastName { get; set; }
 
         [Display(Name = "Full Name")]
-        public string FullName { get; }
+        public string FullName 
+        {
+            get
+            {
+                string fullName = FirstName + " " + LastName;
+                return fullName;
+            }
+        }
     }
 }
